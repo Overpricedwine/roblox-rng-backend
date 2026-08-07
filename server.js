@@ -16,7 +16,7 @@ const redis = new Redis({
 async function passesQualityFilters(userId) {
     try {
         // Filter 1: Reject any account ID that is 8 billion or higher
-        if (Number(userId) >= 8000000000) {
+        if (Number(userId) >= 10000000000) {
             console.log(`❌ Filtered ID ${userId}: Account ID is 8 Billion or newer`);
             return false;
         }
