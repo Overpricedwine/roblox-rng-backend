@@ -6,7 +6,7 @@ const app = express();
 app.use(express.json({ limit: "256kb" }));
 
 const PORT = process.env.PORT || 3000;
-const MAX_INCOMING_BATCH_SIZE = 200;
+const MAX_INCOMING_BATCH_SIZE = 250;
 const REDIS_WRITE_BATCH_SIZE = 20000;
 const ROBLOX_REQUEST_DELAY_MS = Number(
   process.env.ROBLOX_REQUEST_DELAY_MS || 150
